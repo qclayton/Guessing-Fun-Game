@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Guessing FunGame</string>
-    <string name="play_button">Lets Play!</string>
+    <string name="Answer_1"></string>
+    <string name="Answer_2"></string>
+    <string name="Answer_3"></string>
+    <string name="Answer_4"></string>
+    <string name="Image_area"></string>
 </resources>
