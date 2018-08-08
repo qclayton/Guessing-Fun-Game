@@ -1,8 +1,14 @@
 package com.example.quentinclayton.guessingfungame;
 
+import android.content.Intent;
+import android.content.res.AssetManager;
+import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -12,17 +18,32 @@ import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import com.example.quentinclayton.guessingfungame.SecondActivity;
 
 import javax.net.ssl.HttpsURLConnection;
 
 public class MainActivity extends AppCompatActivity {
 
     DownloadTask myDownload;
+    public static int score = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         URL url = null;
+        ImageView img = findViewById(R.id.first);
+        AssetManager am = getAssets();
+        Button correct = (Button)findViewById(R.id.correct1);
+        try {
+            InputStream ims = am.open("doom.jpg");
+
+            Drawable d = Drawable.createFromStream(ims, null);
+
+            img.setImageDrawable(d);
+
+        } catch (IOException ex) {
+            return;
+        }
         try {
             url = new URL("https://www.pcauthority.com.au/News/170181,top-10-computer-games-of-all-time");
             downloadUrl(url);
@@ -31,6 +52,15 @@ public class MainActivity extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        correct.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent k = new Intent(MainActivity.this, SecondActivity.class);
+                startActivity(k);
+                score += 1;
+            }
+        });
 
     }
 
@@ -98,6 +128,7 @@ public class MainActivity extends AppCompatActivity {
             return result;
         }
     }
+
 }
 
 

@@ -6,4 +6,15 @@
     <string name="Answer_4"></string>
     <string name="Image_area"></string>
     <string name="final_score">Final Score</string>
+    <string name="todo">TODO</string>
+    <string name="minesweeper">Minesweeper</string>
+    <string name="neverwinter_nights">Neverwinter Nights</string>
+    <string name="sims">Sims</string>
+    <string name="doom">Doom</string>
+    <string name="tetris">Tetris</string>
+    <string name="civilization">Civilization</string>
+    <string name="elite">Elite</string>
+    <string name="world_of_warcraft">World Of Warcraft</string>
+    <string name="space_war">Space War</string>
+    <string name="half_life">Half Life</string>
 </resources>
