@@ -6,21 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/button20"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.734"
-        app:layout_constraintStart_toEndOf="@+id/textView10"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
-
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="243dp"
@@ -38,7 +23,7 @@
         app:srcCompat="@android:color/transparent" />
 
     <Button
-        android:id="@+id/button17"
+        android:id="@+id/incorrect3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -54,7 +39,7 @@
         app:layout_constraintVertical_bias="0.928" />
 
     <Button
-        android:id="@+id/button18"
+        android:id="@+id/incorrect1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -69,21 +54,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.675" />
 
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="28dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="8dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/button18"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        app:layout_constraintVertical_bias="0.586" />
-
     <Button
-        android:id="@+id/button19"
+        android:id="@+id/incorrect2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -99,7 +71,7 @@
         app:layout_constraintVertical_bias="0.928" />
 
     <Button
-        android:id="@+id/button20"
+        android:id="@+id/correct9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
