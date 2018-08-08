@@ -17,5 +17,7 @@ public class End extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.end_game);
+        EditText e = findViewById(R.id.score);
+        e.setText(MainActivity.score + "");
     }
 }

@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -25,7 +26,7 @@ import javax.net.ssl.HttpsURLConnection;
 public class MainActivity extends AppCompatActivity {
 
     DownloadTask myDownload;
-    public static int score = 0;
+    public static int score = 10;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
         ImageView img = findViewById(R.id.first);
         AssetManager am = getAssets();
         Button correct = (Button)findViewById(R.id.correct1);
+        Button incorrect1 = (Button) findViewById(R.id.incorrect1);
+        Button incorrect2 = (Button) findViewById(R.id.incorrect2);
+        Button incorrect3 = (Button) findViewById(R.id.incorrect3);
         try {
             InputStream ims = am.open("doom.jpg");
 
@@ -59,6 +63,28 @@ public class MainActivity extends AppCompatActivity {
                 Intent k = new Intent(MainActivity.this, SecondActivity.class);
                 startActivity(k);
                 score += 1;
+                Toast.makeText(MainActivity.this, "Correct Answer", Toast.LENGTH_LONG).show();
+            }
+        });
+        incorrect1.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Incorrect Answer", Toast.LENGTH_LONG).show();
+                score -= 1;
+            }
+        });
+        incorrect2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Incorrect Answer", Toast.LENGTH_LONG).show();
+                score -= 1;
+            }
+        });
+        incorrect3.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Incorrect Answer", Toast.LENGTH_LONG).show();
+                score -= 1;
             }
         });
 
